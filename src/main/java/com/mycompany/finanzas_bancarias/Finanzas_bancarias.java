@@ -8,9 +8,23 @@ package com.mycompany.finanzas_bancarias;
  *
  * @a//leonel alvarez
  */
-public class Finanzas_bancarias {
 
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Finanzas_bancarias {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        String url = "jdbc:sqlserver://localhost:1433;databaseName=..."; // Reemplaza con tu DB
+        String usuario = "user_leonel98";
+        String clave = "1234";
+
+        try (Connection conexion = DriverManager.getConnection(url, usuario, clave)) {
+            System.out.println("Conexión exitosa");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
