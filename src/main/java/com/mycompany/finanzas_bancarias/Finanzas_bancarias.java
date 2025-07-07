@@ -23,7 +23,7 @@ public class Finanzas_bancarias {
 
         try (Connection conexion = DriverManager.getConnection(url, usuario, clave)) {
             System.out.println("Conexión exitosa");
-            System.out.println("prueba");
+            System.out.println("prueba 2");
         } catch (SQLException e) {
             e.printStackTrace();
         }
