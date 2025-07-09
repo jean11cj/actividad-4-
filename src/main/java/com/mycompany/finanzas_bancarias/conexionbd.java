@@ -16,11 +16,19 @@ import java.sql.SQLException;
 public class conexionbd {
 
     public static Connection conectar() throws SQLException {
-        String url = "jdbc:sqlserver://localhost:1433;databaseName=mi_base_datos";
-        String usuario = "user_leonel98"; // usa tus datos reales
+        String url = "jdbc:sqlserver://localhost:1433;databaseName=..."; // Reemplaza con tu DB
+        String usuario = "user_leonel98";
         String clave = "1234";
 
-        return DriverManager.getConnection(url, usuario, clave);
+        try (Connection conexion = DriverManager.getConnection(url, usuario, clave)) {
+            System.out.println("Conexión exitosa");
+            System.out.println("prueba 2");
+            return conexion;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+        
     }
 }
     
