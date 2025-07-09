@@ -17,15 +17,6 @@ import java.sql.SQLException;
 
 public class Finanzas_bancarias {
     public static void main(String[] args) {
-        String url = "jdbc:sqlserver://localhost:1433;databaseName=..."; // Reemplaza con tu DB
-        String usuario = "user_leonel98";
-        String clave = "1234";
-
-        try (Connection conexion = DriverManager.getConnection(url, usuario, clave)) {
-            System.out.println("Conexión exitosa");
-            System.out.println("prueba 2");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        
     }
 }
